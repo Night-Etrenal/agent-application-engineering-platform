@@ -1,0 +1,22 @@
+name: Repository Foundation CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+        with:
+          persist-credentials: false
+      - name: Python syntax check
+        run: python3 -m py_compile tools/validate_repository_foundation.py
+      - name: Validate repository foundation
+        run: python3 tools/validate_repository_foundation.py
