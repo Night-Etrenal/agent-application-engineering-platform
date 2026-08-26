@@ -14,6 +14,12 @@
   "bootstrap_main_sha": "1e98829ea754a6fe79d525095d0a78947744f4ee",
   "ci_bootstrap_main_sha": "d6fac90ca647381f19e779860d100c1d65e43d0e",
   "ci_bootstrap_exception_consumed": true,
+  "ci": {
+    "workflow_path": ".github/workflows/ci.yml",
+    "workflow_present_on_main": true,
+    "exact_head_validation_status": "PENDING",
+    "required_before_merge": true
+  },
   "governance": {
     "platform": "UEGP",
     "canonical_repository": "Night-Etrenal/universal-computing-governance",
