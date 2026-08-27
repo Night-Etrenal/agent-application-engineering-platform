@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "project_id": "AAEP",
+  "project_name": "Agent Application Engineering Platform",
+  "primary_repository": "Night-Etrenal/agent-application-engineering-platform",
+  "visibility": "PUBLIC",
+  "repository_phase": "REPOSITORY_FOUNDATION_V1",
+  "repository_foundation_status": "IN_PROGRESS",
+  "project_control_root": "Night-Etrenal/agent-application-engineering-platform#1",
+  "uplec_launch_root": "Night-Etrenal/universal-project-launch-execution-center#7",
+  "uplec_execution_root": "Night-Etrenal/universal-project-launch-execution-center#8",
+  "active_branch": "agent/aaep-repository-foundation-v1-r2",
+  "single_writer": "AAEP-P01-FOUNDATION",
+  "bootstrap_main_sha": "1e98829ea754a6fe79d525095d0a78947744f4ee",
+  "ci_bootstrap_main_sha": "d6fac90ca647381f19e779860d100c1d65e43d0e",
+  "ci_bootstrap_exception_consumed": true,
+  "ci": {
+    "workflow_path": ".github/workflows/ci.yml",
+    "workflow_present_on_main": true,
+    "exact_head_validation_status": "PENDING",
+    "required_before_merge": true
+  },
+  "governance": {
+    "platform": "UEGP",
+    "canonical_repository": "Night-Etrenal/universal-computing-governance",
+    "observed_head_at_foundation_start": "08a57a7dea45e8388d92538f0b21a25207a1caed",
+    "consumer_onboarding_issue": "Night-Etrenal/universal-computing-governance#33",
+    "onboarding_status": "PENDING_CONSUMER_REGISTRATION",
+    "adoption_status": "NOT_ADOPTED"
+  },
+  "continuity": {
+    "provider": "Night-Etrenal/Engineering-Continuity",
+    "observed_head_at_foundation_start": "189fcb157a739d953248903796717c62ab5a5ded"
+  },
+  "upstream": {
+    "repository": "deepseek-ai/deepseek-harness",
+    "observed_head": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e",
+    "adoption_status": "OBSERVED_NOT_ADOPTED",
+    "reference_fork": "Night-Etrenal/Ai-deepseek-harness",
+    "reference_fork_head": "04ae6a52d4e52eae73e3414d620908d01b389143"
+  },
+  "license": {
+    "project_license_status": "DECISION_REQUIRED",
+    "third_party_provenance_required": true
+  },
+  "authority": {
+    "production": "NOT_GRANTED",
+    "runtime_mutation": "NOT_GRANTED",
+    "secrets_credentials": "NOT_GRANTED",
+    "network_mutation": "NOT_GRANTED",
+    "administrative": "NOT_GRANTED",
+    "signing": "NOT_GRANTED",
+    "package_publication": "NOT_GRANTED"
+  },
+  "mutable_facts_revalidation_required": true
+}
