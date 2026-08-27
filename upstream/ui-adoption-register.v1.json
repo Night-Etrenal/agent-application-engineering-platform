@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "register_semantics": "UI_CHANGE_REQUIRES_EXPLICIT_CLASSIFICATION",
+  "official_repository": "deepseek-ai/deepseek-harness",
+  "observed_under_head": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e",
+  "adoption_scope": "CONTROL_METADATA_ONLY_NO_SOURCE_IMPORT",
+  "items": [
+    {
+      "id": "reference-input-recall-ordering",
+      "source_commit": "1943a532f604a960ff146c5f4c93aaa213683f29",
+      "summary": "Align Web reference input and recall ordering.",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "rationale": "Preserve the interaction principle after AAEP product-flow review rather than copying upstream presentation wholesale."
+    },
+    {
+      "id": "workspace-new-session-ordering",
+      "source_commit": "e333dfc8f5bfad15bc7fb0392630559922923851",
+      "summary": "Pin the current blank New Session row first without persisting a false permanent order.",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "rationale": "The state/render separation is valuable for workspace UX and should be adapted to AAEP session semantics."
+    },
+    {
+      "id": "conversation-terminal-retry-error",
+      "source_commit": "daaede29a5ae30daf7da5b81869b3ae5a4d221e1",
+      "summary": "Render terminal turn errors after same-turn retries are exhausted.",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "rationale": "Explicit terminal failure evidence is useful, but AAEP error/retry semantics must follow its own runtime and acceptance contracts."
+    },
+    {
+      "id": "web-client-boot-seams",
+      "source_commit": "156bd075a9c8cdbd7fcfb0392630559922923851",
+      "summary": "Introduce structured index injection and client boot seams.",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "rationale": "Boot seams improve host/client replaceability, but deployment and frontend-serving decisions remain AAEP-owned."
+    },
+    {
+      "id": "visual-language-and-branding",
+      "source_commit": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e",
+      "summary": "Upstream UI primitives and product visual language are treated as reference material only.",
+      "decision": "REIMPLEMENT",
+      "implementation_status": "NOT_STARTED",
+      "rationale": "AAEP owns its product visual identity, information architecture and branding; interaction ideas may be studied without inheriting upstream identity."
+    }
+  ]
+}
