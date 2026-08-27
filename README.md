@@ -12,12 +12,12 @@ AAEP keeps project architecture, governance binding, security boundaries, contin
 
 | Area | State | Evidence |
 |---|---|---|
-| Repository Foundation | `IN_PROGRESS` | AAEP Issue #1, branch `agent/aaep-repository-foundation-v1-r2` |
-| CI Bootstrap | `ESTABLISHED` | `main@d6fac90ca647381f19e779860d100c1d65e43d0e` |
+| Repository Foundation | `COMPLETE` | PR #4, merge `e9c8df3ddf198ab982e9b3b6d0ad89c794549d8d` |
+| Foundation CI | `PASS` | PR-head job `98231869629`; merged-main run `33087321697` |
 | UEGP Governance Onboarding | `PENDING_CONSUMER_REGISTRATION` | `Night-Etrenal/universal-computing-governance#33` |
 | Upstream Source | `OBSERVED_NOT_ADOPTED` | `deepseek-ai/deepseek-harness@b150a551b8d465e31e418e1b2eaf5e79bbb7d28e` |
 | Reference Fork | `REFERENCE_ONLY` | `Night-Etrenal/Ai-deepseek-harness@04ae6a52d4e52eae73e3414d620908d01b389143` |
-| Runtime | `NOT_ESTABLISHED` | repository-foundation phase only |
+| Runtime | `NOT_ESTABLISHED` | repository-only phase |
 | Live Execution | `NOT_AUTHORIZED` | no production/runtime authority |
 | AAEP License | `DECISION_REQUIRED` | `LICENSE` |
 
@@ -35,7 +35,7 @@ No automatic upstream merge or trust inheritance is allowed.
 
 ## Repository Governance
 
-- Canonical engineering state: this repository after Repository Foundation acceptance.
+- Canonical engineering state: this repository.
 - Project control: `Night-Etrenal/agent-application-engineering-platform#1`.
 - Launch/discovery pointer: `Night-Etrenal/universal-project-launch-execution-center#7`.
 - P01 execution contract: `Night-Etrenal/universal-project-launch-execution-center#8`.
@@ -78,8 +78,8 @@ AAEP does not create a second universal engineering governance, authorization, s
 
 **Agent Application Engineering Platform（AAEP，智能体应用工程平台）** 是一个面向高价值 AI 智能体应用的公开工程平台，目标是形成从应用发现、架构设计、开发实现、验证验收、产品化到长期演进的专业工程体系。DeepSeek Harness 只作为受控上游技术来源，AAEP 保持自己的架构、治理绑定、安全边界、连续性、产品所有权和发布决策。
 
-当前仓库已经公开，但 **AAEP 自身开源许可证尚未由项目所有者正式确定**；公开可见不等于已经授予开源使用、修改和分发权利。
+AAEP Repository Foundation（仓库基础）V1 已完成，并通过 PR 精确提交头验证与合并后 `main` CI 验证。当前下一治理工作是 UEGP Consumer Onboarding（消费者治理接入）；在 UEGP #33 完成 Consumer Registration（消费者登记）和治理 Profile（配置）前，AAEP 不会伪造 `.uceg/` 已采用状态。
 
-当前阶段重点是建立完整 Repository Foundation（仓库基础）并完成 UEGP Governance Onboarding（治理接入）。在 UEGP #33 完成 Consumer Registration（消费者登记）和治理 Profile（配置）前，AAEP 不会伪造 `.uceg/` 已采用状态。
+当前仓库已经公开，但 **AAEP 自身开源许可证尚未由项目所有者正式确定**；公开可见不等于已经授予开源使用、修改和分发权利。
 
 任何上游能力、UI、插件或源码进入 AAEP 前，都必须经过来源、许可证、安全、兼容性和工程价值审查，并明确选择 `REUSE / ADAPT / REIMPLEMENT / DEFER / REJECT`。
