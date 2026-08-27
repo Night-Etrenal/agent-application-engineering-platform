@@ -55,11 +55,15 @@ managed = [
     ROOT / ".uceg/governance-source.json",
     ROOT / ".uceg/projection-manifest.json",
 ]
-if onboarding == "PENDING_CONSUMER_REGISTRATION":
+pre_projection_states = {
+    "PENDING_CONSUMER_REGISTRATION",
+    "MANUAL_REVIEW_REQUIRED",
+}
+if onboarding in pre_projection_states:
     if any(path.exists() for path in managed):
-        raise SystemExit("managed .uceg projection must remain absent before UEGP registration/onboarding")
+        raise SystemExit("managed .uceg projection must remain absent before approved UEGP projection execution")
     if adoption != "NOT_ADOPTED":
-        raise SystemExit("pending onboarding cannot claim adoption")
+        raise SystemExit("pre-projection onboarding state cannot claim adoption")
 
 license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
 if state.get("license", {}).get("project_license_status") == "DECISION_REQUIRED":
