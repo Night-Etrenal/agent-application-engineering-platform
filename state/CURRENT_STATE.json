@@ -4,26 +4,36 @@
   "project_name": "Agent Application Engineering Platform",
   "primary_repository": "Night-Etrenal/agent-application-engineering-platform",
   "visibility": "PUBLIC",
-  "repository_phase": "REPOSITORY_FOUNDATION_V1",
-  "repository_foundation_status": "IN_PROGRESS",
+  "repository_phase": "REPOSITORY_FOUNDATION_COMPLETE_GOVERNANCE_ONBOARDING_PENDING",
+  "repository_foundation_status": "COMPLETE",
   "project_control_root": "Night-Etrenal/agent-application-engineering-platform#1",
   "uplec_launch_root": "Night-Etrenal/universal-project-launch-execution-center#7",
   "uplec_execution_root": "Night-Etrenal/universal-project-launch-execution-center#8",
-  "active_branch": "agent/aaep-repository-foundation-v1-r2",
-  "single_writer": "AAEP-P01-FOUNDATION",
+  "active_foundation_branch": null,
+  "single_writer": "NONE",
   "bootstrap_main_sha": "1e98829ea754a6fe79d525095d0a78947744f4ee",
   "ci_bootstrap_main_sha": "d6fac90ca647381f19e779860d100c1d65e43d0e",
   "ci_bootstrap_exception_consumed": true,
+  "foundation_evidence": {
+    "implementation_pr": 4,
+    "validated_pr_head": "66115caf8d74d1cc0198ba6a70faa5fbc701c4eb",
+    "validated_pr_ci_run": 32985774240,
+    "validated_pr_ci_job": 98231869629,
+    "validated_pr_ci_job_conclusion": "success",
+    "implementation_merge_sha": "e9c8df3ddf198ab982e9b3b6d0ad89c794549d8d",
+    "merged_main_ci_run": 33087321697,
+    "merged_main_ci_conclusion": "success"
+  },
   "ci": {
     "workflow_path": ".github/workflows/ci.yml",
     "workflow_present_on_main": true,
-    "exact_head_validation_status": "PENDING",
-    "required_before_merge": true
+    "foundation_validation_status": "PASS",
+    "required_for_normal_changes": true
   },
   "governance": {
     "platform": "UEGP",
     "canonical_repository": "Night-Etrenal/universal-computing-governance",
-    "observed_head_at_foundation_start": "08a57a7dea45e8388d92538f0b21a25207a1caed",
+    "current_observed_head": "08a57a7dea45e8388d92538f0b21a25207a1caed",
     "consumer_onboarding_issue": "Night-Etrenal/universal-computing-governance#33",
     "onboarding_status": "PENDING_CONSUMER_REGISTRATION",
     "adoption_status": "NOT_ADOPTED"
