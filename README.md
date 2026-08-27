@@ -13,9 +13,10 @@ AAEP keeps project architecture, governance binding, security boundaries, contin
 | Area | State | Evidence |
 |---|---|---|
 | Repository Foundation | `COMPLETE` | PR #4, merge `e9c8df3ddf198ab982e9b3b6d0ad89c794549d8d` |
-| Foundation CI | `PASS` | PR-head job `98231869629`; merged-main run `33087321697` |
+| P02 Upstream Adoption Control | `COMPLETE` | Issue #6, PR #7, merge `3b3a7d4ee0f8cd89e759514fd49f71579d45eca4` |
+| Repository CI | `PASS` | exact-head run `33088508883`; merged-main run `33088605964` |
 | UEGP Governance Onboarding | `PENDING_CONSUMER_REGISTRATION` | `Night-Etrenal/universal-computing-governance#33` |
-| Upstream Source | `OBSERVED_NOT_ADOPTED` | `deepseek-ai/deepseek-harness@b150a551b8d465e31e418e1b2eaf5e79bbb7d28e` |
+| Upstream Source | `CLASSIFIED_NOT_IMPLEMENTED` | `deepseek-ai/deepseek-harness@b150a551b8d465e31e418e1b2eaf5e79bbb7d28e` |
 | Reference Fork | `REFERENCE_ONLY` | `Night-Etrenal/Ai-deepseek-harness@04ae6a52d4e52eae73e3414d620908d01b389143` |
 | Runtime | `NOT_ESTABLISHED` | repository-only phase |
 | Live Execution | `NOT_AUTHORIZED` | no production/runtime authority |
@@ -31,7 +32,7 @@ Upstream changes are classified before adoption:
 
 `REUSE / ADAPT / REIMPLEMENT / DEFER / REJECT`
 
-No automatic upstream merge or trust inheritance is allowed.
+No automatic upstream merge or trust inheritance is allowed. P02 V1 provides machine-readable capability/UI registers and deterministic validation, but imports no upstream source code and claims no implemented upstream capability.
 
 ## Repository Governance
 
@@ -54,6 +55,8 @@ AAEP does not create a second universal engineering governance, authorization, s
 - Smallest Coherent Change（最小完整变更）
 - Recovery Instead of Restart（恢复而不是重做）
 - Branch → PR → Review → CI → Merge → exact-head revalidation
+- PR CI explicitly checks out the exact pull-request head SHA
+- CI runner is pinned to `ubuntu-24.04`
 - no direct `main` writes after the consumed empty-repository bootstrap exception
 - no secrets, credentials, private customer data, or private production topology in this public repository
 
@@ -67,8 +70,8 @@ AAEP does not create a second universal engineering governance, authorization, s
 - `state/` — machine-readable project state
 - `governance/` — project-local governance pointers, never duplicate universal governance
 - `continuity/` — Engineering-Continuity recovery pointer
-- `upstream/` — upstream provenance and controlled-adoption policy
-- `docs/architecture/` — architecture documentation
+- `upstream/` — upstream provenance, capability/UI classification and controlled-adoption policy
+- `docs/architecture/` — architecture and upstream capability mapping
 - `docs/adr/` — Architecture Decision Records
 - `docs/roadmap/` — evidence-backed roadmap
 
@@ -78,7 +81,9 @@ AAEP does not create a second universal engineering governance, authorization, s
 
 **Agent Application Engineering Platform（AAEP，智能体应用工程平台）** 是一个面向高价值 AI 智能体应用的公开工程平台，目标是形成从应用发现、架构设计、开发实现、验证验收、产品化到长期演进的专业工程体系。DeepSeek Harness 只作为受控上游技术来源，AAEP 保持自己的架构、治理绑定、安全边界、连续性、产品所有权和发布决策。
 
-AAEP Repository Foundation（仓库基础）V1 已完成，并通过 PR 精确提交头验证与合并后 `main` CI 验证。当前下一治理工作是 UEGP Consumer Onboarding（消费者治理接入）；在 UEGP #33 完成 Consumer Registration（消费者登记）和治理 Profile（配置）前，AAEP 不会伪造 `.uceg/` 已采用状态。
+AAEP Repository Foundation（仓库基础）V1 已完成。P02 Upstream Capability & UI Adoption Control（上游能力与 UI 受控采用）V1 也已完成：当前已经拥有精确上游版本锁定、能力注册表、UI 采用登记和确定性验证，但这些只是采用控制事实，**不代表 DeepSeek Harness 的相关功能已经在 AAEP 中实现**。
+
+当前独立治理 Gate（门）仍是 UEGP Consumer Onboarding（治理消费者接入）；在 UEGP #33 完成 Consumer Registration（消费者登记）和 Governance Profile（治理配置）前，AAEP 不会伪造 `.uceg/` 已采用状态。
 
 当前仓库已经公开，但 **AAEP 自身开源许可证尚未由项目所有者正式确定**；公开可见不等于已经授予开源使用、修改和分发权利。
 
