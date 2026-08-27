@@ -1,4 +1,4 @@
-name: Repository Foundation CI
+name: AAEP Repository CI
 
 on:
   pull_request:
@@ -9,14 +9,17 @@ permissions:
   contents: read
 
 jobs:
-  foundation:
-    runs-on: ubuntu-latest
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - name: Checkout exact commit
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           persist-credentials: false
       - name: Python syntax check
-        run: python3 -m py_compile tools/validate_repository_foundation.py
+        run: python3 -m py_compile tools/validate_repository_foundation.py tools/validate_upstream_adoption.py
       - name: Validate repository foundation
         run: python3 tools/validate_repository_foundation.py
+      - name: Validate upstream adoption controls
+        run: python3 tools/validate_upstream_adoption.py
