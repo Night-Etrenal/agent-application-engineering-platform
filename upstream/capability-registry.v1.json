@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "registry_semantics": "CLASSIFICATION_ONLY_NO_AUTOMATIC_ADOPTION",
+  "source_snapshot": {
+    "official_repository": "deepseek-ai/deepseek-harness",
+    "official_head": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e",
+    "release_generation": "dsh@0.1.1-rc.2",
+    "reference_fork": "Night-Etrenal/Ai-deepseek-harness",
+    "reference_fork_head": "04ae6a52d4e52eae73e3414d620908d01b389143",
+    "upstream_stage": "DEVELOPER_PREVIEW",
+    "compatibility_breaking_changes_expected": true
+  },
+  "adoption_scope": "CONTROL_METADATA_ONLY_NO_SOURCE_IMPORT",
+  "capabilities": [
+    {
+      "id": "cordis-plugin-composition",
+      "category": "ARCHITECTURE",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW_CORE",
+      "rationale": "Preserve replaceable plugin composition while keeping AAEP configuration, governance and product ownership independent.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "profiles-and-bundles",
+      "category": "COMPOSITION",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW_CORE",
+      "rationale": "Layered profiles and bundles are useful for product-specific capability composition without a privileged monolithic core.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "session-event-log",
+      "category": "CONTINUITY",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW_CORE",
+      "rationale": "Durable model-visible context and replay are strategically valuable, but AAEP must integrate with Engineering-Continuity rather than create an isolated recovery system.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "model-adapter-seam",
+      "category": "MODEL_INTEGRATION",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW_CORE",
+      "rationale": "Provider-swappable model adapters support vendor independence and avoid binding AAEP products to one model provider.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "scoped-tool-execution-pipeline",
+      "category": "TOOLS_AND_POLICY",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW_CORE",
+      "rationale": "Scoped registration and guarded tool execution are aligned with capability/authority separation, subject to UEGP authorization rules.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "sandbox-and-approval",
+      "category": "SECURITY",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW_CORE",
+      "rationale": "Sandbox and approval seams are required foundation capabilities, but effective authority remains governed by UEGP and project-local gates.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "filesystem-subprocess-execution-world",
+      "category": "EXECUTION",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW_CORE",
+      "rationale": "A swappable execution world can support local and sandboxed backends while keeping runtime authority separately gated.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "subagent-provider-seam",
+      "category": "AGENT_ORCHESTRATION",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW",
+      "rationale": "Provider-neutral subagent orchestration is reusable, while concrete provider choices remain AAEP-owned and separately reviewed.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "web-ui-primitives",
+      "category": "CLIENT_UI",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW",
+      "rationale": "Reusable interaction primitives and safe renderers are valuable, but product-specific information architecture and visual identity remain AAEP-owned.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "packages/client/ui-primitives/README.md"}]
+    },
+    {
+      "id": "headless-profile",
+      "category": "RUNTIME_COMPOSITION",
+      "decision": "ADAPT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "DEVELOPER_PREVIEW",
+      "rationale": "A serverless one-shot profile is useful for automation and validation workloads without forcing the Web UI into every product.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "experimental-agent-teams",
+      "category": "MULTI_AGENT",
+      "decision": "DEFER",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "EXPERIMENTAL",
+      "rationale": "The upstream capability is explicitly experimental; AAEP will not make it foundational before independent validation and a concrete product need.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "docs/architecture.md"}]
+    },
+    {
+      "id": "product-visual-identity",
+      "category": "PRODUCT_UI",
+      "decision": "REIMPLEMENT",
+      "implementation_status": "NOT_STARTED",
+      "upstream_maturity": "PRODUCT_SPECIFIC",
+      "rationale": "AAEP may learn from upstream interaction patterns but must own its visual language, branding and downstream product UX.",
+      "evidence": [{"repository": "deepseek-ai/deepseek-harness", "ref": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e", "path": "packages/client/ui-primitives/README.md"}]
+    }
+  ]
+}
