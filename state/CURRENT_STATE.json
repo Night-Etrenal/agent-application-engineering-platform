@@ -4,12 +4,11 @@
   "project_name": "Agent Application Engineering Platform",
   "primary_repository": "Night-Etrenal/agent-application-engineering-platform",
   "visibility": "PUBLIC",
-  "repository_phase": "REPOSITORY_FOUNDATION_COMPLETE_GOVERNANCE_ONBOARDING_PENDING",
+  "repository_phase": "FOUNDATION_COMPLETE_P02_CONTROL_COMPLETE_GOVERNANCE_ONBOARDING_PENDING",
   "repository_foundation_status": "COMPLETE",
   "project_control_root": "Night-Etrenal/agent-application-engineering-platform#1",
   "uplec_launch_root": "Night-Etrenal/universal-project-launch-execution-center#7",
   "uplec_execution_root": "Night-Etrenal/universal-project-launch-execution-center#8",
-  "active_foundation_branch": null,
   "single_writer": "NONE",
   "bootstrap_main_sha": "1e98829ea754a6fe79d525095d0a78947744f4ee",
   "ci_bootstrap_main_sha": "d6fac90ca647381f19e779860d100c1d65e43d0e",
@@ -19,15 +18,31 @@
     "validated_pr_head": "66115caf8d74d1cc0198ba6a70faa5fbc701c4eb",
     "validated_pr_ci_run": 32985774240,
     "validated_pr_ci_job": 98231869629,
-    "validated_pr_ci_job_conclusion": "success",
     "implementation_merge_sha": "e9c8df3ddf198ab982e9b3b6d0ad89c794549d8d",
     "merged_main_ci_run": 33087321697,
-    "merged_main_ci_conclusion": "success"
+    "completion_state_merge_sha": "a1c618cdcc0892be32fb9a529aad3bf22aff4923"
+  },
+  "p02_upstream_adoption_control": {
+    "status": "COMPLETE",
+    "issue": 6,
+    "implementation_pr": 7,
+    "validated_pr_head": "7d23147e3cea977a27b59092b0ecc0a85586d155",
+    "validated_pr_ci_run": 33088508883,
+    "validated_pr_ci_job": 98574642354,
+    "validated_pr_ci_conclusion": "success",
+    "implementation_merge_sha": "3b3a7d4ee0f8cd89e759514fd49f71579d45eca4",
+    "merged_main_ci_run": 33088605964,
+    "merged_main_ci_conclusion": "success",
+    "scope": "CONTROL_METADATA_ONLY_NO_SOURCE_IMPORT",
+    "capability_implementation_status": "NOT_STARTED"
   },
   "ci": {
     "workflow_path": ".github/workflows/ci.yml",
-    "workflow_present_on_main": true,
-    "foundation_validation_status": "PASS",
+    "workflow_name": "AAEP Repository CI",
+    "runner": "ubuntu-24.04",
+    "exact_pr_head_checkout": true,
+    "repository_foundation_validation": "PASS",
+    "upstream_adoption_validation": "PASS",
     "required_for_normal_changes": true
   },
   "governance": {
@@ -45,7 +60,9 @@
   "upstream": {
     "repository": "deepseek-ai/deepseek-harness",
     "observed_head": "b150a551b8d465e31e418e1b2eaf5e79bbb7d28e",
-    "adoption_status": "OBSERVED_NOT_ADOPTED",
+    "observed_release_generation": "dsh@0.1.1-rc.2",
+    "upstream_stage": "DEVELOPER_PREVIEW",
+    "adoption_status": "CLASSIFIED_NOT_IMPLEMENTED",
     "reference_fork": "Night-Etrenal/Ai-deepseek-harness",
     "reference_fork_head": "04ae6a52d4e52eae73e3414d620908d01b389143"
   },
