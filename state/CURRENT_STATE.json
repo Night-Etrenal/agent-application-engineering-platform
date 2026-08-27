@@ -4,7 +4,7 @@
   "project_name": "Agent Application Engineering Platform",
   "primary_repository": "Night-Etrenal/agent-application-engineering-platform",
   "visibility": "PUBLIC",
-  "repository_phase": "FOUNDATION_COMPLETE_P02_CONTROL_COMPLETE_GOVERNANCE_ONBOARDING_PENDING",
+  "repository_phase": "FOUNDATION_COMPLETE_P02_CONTROL_COMPLETE_GOVERNANCE_MANUAL_REVIEW_REQUIRED",
   "repository_foundation_status": "COMPLETE",
   "project_control_root": "Night-Etrenal/agent-application-engineering-platform#1",
   "uplec_launch_root": "Night-Etrenal/universal-project-launch-execution-center#7",
@@ -48,10 +48,42 @@
   "governance": {
     "platform": "UEGP",
     "canonical_repository": "Night-Etrenal/universal-computing-governance",
-    "current_observed_head": "08a57a7dea45e8388d92538f0b21a25207a1caed",
+    "current_observed_head": "1f0b04bca164178b93584870f79d8d053f8f0639",
     "consumer_onboarding_issue": "Night-Etrenal/universal-computing-governance#33",
-    "onboarding_status": "PENDING_CONSUMER_REGISTRATION",
-    "adoption_status": "NOT_ADOPTED"
+    "consumer_registration_status": "COMPLETE",
+    "registration_profile_pr": 34,
+    "registration_profile_merge_sha": "1f0b04bca164178b93584870f79d8d053f8f0639",
+    "registration_profile_ci_run": 33090100832,
+    "onboarding_status": "MANUAL_REVIEW_REQUIRED",
+    "adoption_status": "NOT_ADOPTED",
+    "manual_review_ref": "Night-Etrenal/universal-computing-governance#33",
+    "candidate": {
+      "projection_state": "ONBOARDING_REQUIRED",
+      "compatibility": "COMPATIBLE",
+      "risk_classification": "MEDIUM",
+      "candidate_state": "MANUAL_REVIEW_REQUIRED",
+      "base_sha_revalidation_required": true,
+      "changes": [
+        {
+          "path": ".uceg/governance-profile.json",
+          "change_kind": "CREATE",
+          "expected_old_sha256": null,
+          "new_sha256": "ce19214bd7f992a0b7541a5f71209a6adac556608e764efb85fc74cf07f50501"
+        },
+        {
+          "path": ".uceg/governance-source.json",
+          "change_kind": "CREATE",
+          "expected_old_sha256": null,
+          "new_sha256": "271e465219e20307fcaeb114c4fb4694f3ac7e10f2e8c73955120f6f6b6a8b52"
+        },
+        {
+          "path": ".uceg/projection-manifest.json",
+          "change_kind": "CREATE",
+          "expected_old_sha256": null,
+          "new_sha256": "655a8e7e1078c1a28a71c9e018b2ae3a5b47e78b82a7def9637c1ea90adddfea"
+        }
+      ]
+    }
   },
   "continuity": {
     "provider": "Night-Etrenal/Engineering-Continuity",

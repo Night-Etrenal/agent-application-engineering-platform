@@ -15,7 +15,8 @@ AAEP keeps project architecture, governance binding, security boundaries, contin
 | Repository Foundation | `COMPLETE` | PR #4, merge `e9c8df3ddf198ab982e9b3b6d0ad89c794549d8d` |
 | P02 Upstream Adoption Control | `COMPLETE` | Issue #6, PR #7, merge `3b3a7d4ee0f8cd89e759514fd49f71579d45eca4` |
 | Repository CI | `PASS` | exact-head run `33088508883`; merged-main run `33088605964` |
-| UEGP Governance Onboarding | `PENDING_CONSUMER_REGISTRATION` | `Night-Etrenal/universal-computing-governance#33` |
+| UEGP Consumer Registration / Profile | `COMPLETE` | UEGP PR #34, merge `1f0b04bca164178b93584870f79d8d053f8f0639` |
+| UEGP Governance Projection | `MANUAL_REVIEW_REQUIRED` | `Night-Etrenal/universal-computing-governance#33` |
 | Upstream Source | `CLASSIFIED_NOT_IMPLEMENTED` | `deepseek-ai/deepseek-harness@b150a551b8d465e31e418e1b2eaf5e79bbb7d28e` |
 | Reference Fork | `REFERENCE_ONLY` | `Night-Etrenal/Ai-deepseek-harness@04ae6a52d4e52eae73e3414d620908d01b389143` |
 | Runtime | `NOT_ESTABLISHED` | repository-only phase |
@@ -41,10 +42,12 @@ No automatic upstream merge or trust inheritance is allowed. P02 V1 provides mac
 - Launch/discovery pointer: `Night-Etrenal/universal-project-launch-execution-center#7`.
 - P01 execution contract: `Night-Etrenal/universal-project-launch-execution-center#8`.
 - Canonical governance owner: `Night-Etrenal/universal-computing-governance` (UEGP).
-- Governance onboarding request: `Night-Etrenal/universal-computing-governance#33`.
+- Governance onboarding / manual-review root: `Night-Etrenal/universal-computing-governance#33`.
 - Continuity provider: `Night-Etrenal/Engineering-Continuity`.
 
 AAEP does not create a second universal engineering governance, authorization, security, or continuity system.
+
+The UEGP Consumer Registry and AAEP Governance Profile are now established. The create-only `.uceg/` projection remains intentionally absent until explicit Manual Review approval and fresh execution preflight are satisfied.
 
 ## Engineering Rules
 
@@ -83,7 +86,7 @@ AAEP does not create a second universal engineering governance, authorization, s
 
 AAEP Repository Foundation（仓库基础）V1 已完成。P02 Upstream Capability & UI Adoption Control（上游能力与 UI 受控采用）V1 也已完成：当前已经拥有精确上游版本锁定、能力注册表、UI 采用登记和确定性验证，但这些只是采用控制事实，**不代表 DeepSeek Harness 的相关功能已经在 AAEP 中实现**。
 
-当前独立治理 Gate（门）仍是 UEGP Consumer Onboarding（治理消费者接入）；在 UEGP #33 完成 Consumer Registration（消费者登记）和 Governance Profile（治理配置）前，AAEP 不会伪造 `.uceg/` 已采用状态。
+UEGP Consumer Registration（消费者登记）和 Governance Profile（治理配置）已经通过 UEGP PR #34 完成。当前真正的治理 Gate（门）是首次 `.uceg/` create-only projection（仅创建投影）的 **Manual Review（人工审查）**。在人工审查和 fresh preflight（新鲜执行前检查）通过前，三个 UEGP 托管文件必须继续保持不存在，不能提前声称治理已采用。
 
 当前仓库已经公开，但 **AAEP 自身开源许可证尚未由项目所有者正式确定**；公开可见不等于已经授予开源使用、修改和分发权利。
 
